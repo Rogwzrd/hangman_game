@@ -15,7 +15,7 @@ var wordBank = ["michigan", "oregon", "ohio", "mississippi"]
     //this variable holds guessed letters
     guessedLetters = [],
 
-    //current word is the variable to match 
+    //current word is the random variable for the user to solve
     currentWord =  wordBank[Math.floor(Math.random() * wordBank.length)],
 
     //this array will be fed input when the user makes a correct guess
