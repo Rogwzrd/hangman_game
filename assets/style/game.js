@@ -1,5 +1,5 @@
 //these variables will hold the hangman words
-var wordBank = ["michigan", "oregon", "ohio", "mississippi"]
+var wordBank = ["michigan", "oregon", "ohio", "mississippi"],
     //number of wins
     wins = 0,
 
@@ -41,7 +41,8 @@ document.onkeyup = function(event) {
     userInput = event.key;
 
     //convert the key userInput into a string
-    var userString = String.fromCharCode(userInput);
+    // var userString = String.fromCharCode(userInput);
+
 
     //if then statement that determines wheter or not a guess has already been placed
     if (guessedLetters.indexOf(userInput) < 0) {
@@ -62,8 +63,8 @@ document.onkeyup = function(event) {
         }
     }
 
-    //this checks to see if the user wins by sorting characters in both the correct guesses and current word array
-    // if (correctGuesses.sort().join(",") === currentWord.sort().join(",")) {
+    // //this checks to see if the user wins by sorting characters in both the correct guesses and current word array
+    // if (correctGuesses.sort().join(",") === currentWord.sort().join(" ")) {
     //     gameWin();
     //     gameReset();
     // }
