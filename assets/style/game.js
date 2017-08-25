@@ -27,6 +27,8 @@ var wordBank = ["michigan", "oregon", "ohio", "mississippi"],
 
     // guessedSpan.innerHTML = "abousldfupaoisu";
 
+document.onkeyup = 
+
     document.getElementById("guesses-left").innerHTML = "sojdfg;klsjdf World!";
 
     document.getElementById("current-Word").innerHTML = "Hello World!";
