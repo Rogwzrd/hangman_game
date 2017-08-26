@@ -11,24 +11,42 @@ var wordBank = ["michigan", "oregon", "ohio", "mississippi"],
     guessedLetters = [],
 
     //current word is the random variable for the user to solve
-    currentWord =  wordBank[Math.floor(Math.random() * wordBank.length)],
+    chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)],
 
     //this array will be fed input when the user makes a correct guess
-    correctGuesses = [],
+    correctGuesses = [];
+
+
+function gameReset() {
+    guessesRemaining = 13;
+    guessedLetters = [];
+}
+
+document.onkeyup = function(event) {
+
+    userInput = event.key;
 
     //this will control in text onscreen for the current word
-    currentSpan = document.getElementById("current-Word"),
+    var currentSpan = document.getElementById("current");
+    currentSpan.innerHTML = chosenWord;
 
     //this will control in text onscreen for the remaining guesses
-    guessesSpan = document.getElementById("guesses-left"),
+    var guessesSpan = document.getElementById("guesses-left");
+    guessesSpan.innerHTML = guessesRemaining;
 
     //this will control the text for the letters guessed so far
-    guessedSpan = document.getElementById("guessed-letters");
+    var lettersSpan = document.getElementById("guessed-letters");
+    lettersSpan.innerHTML = guessedLetters;
 
-    // guessedSpan.innerHTML = "abousldfupaoisu";
+    // this will prevent repeat inputs
+    if ((guessedLetters.indexOf(userInput) < 0) && (event.keyCode >= 65 && event.keyCode <= 90)) {
 
-document.onkeyup = 
+        //this line adds guesses to the visual output
+        guessedLetters.push(userInput);
+    }
 
-    document.getElementById("guesses-left").innerHTML = "sojdfg;klsjdf World!";
+    if (chosenWord.length === correctGuesses.length) {
+        gameReset();
+    }
 
-    document.getElementById("current-Word").innerHTML = "Hello World!";
+}
