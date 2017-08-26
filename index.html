@@ -2,7 +2,7 @@
 <html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/style/style.css">
-<script src="assets/style/game.js"></script>
+<script type="text/javascript" src="assets/style/game.js"></script>
 <head>
     <title>Hangman Game</title>
 </head>
@@ -10,17 +10,16 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Howard Dean Hangman</div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center bg-primary">Howard Dean Hangman</div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Current Word: <span id="current-word"></span>?</div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">Current Word: <span id="current"></span></div>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Guesses left: <span id="guesses-left"></span>13</div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Incorrect Guesses: <span id="guessed-letters"></span></div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 bg-primary">Guesses left: <span id="guesses-left"></span></div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 bg-primary">Incorrect Guesses: <span id="guessed-letters"></span></div>
         </div>
     </div>
-    <div id="game">Press anything button to start the game</div>
 </body>
 
 </html>
